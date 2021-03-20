@@ -5,7 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import br.ufpa.vacinacao.VacinacaoCovidV2App;
+import br.ufpa.vacinacao.VacinacaoApp;
 import br.ufpa.vacinacao.config.Constants;
 import br.ufpa.vacinacao.domain.User;
 import br.ufpa.vacinacao.repository.AuthorityRepository;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @AutoConfigureMockMvc
 @WithMockUser(value = TEST_USER_LOGIN)
-@SpringBootTest(classes = VacinacaoCovidV2App.class)
+@SpringBootTest(classes = VacinacaoApp.class)
 public class AccountResourceIT {
     static final String TEST_USER_LOGIN = "test";
 

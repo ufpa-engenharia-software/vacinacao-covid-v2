@@ -1,11 +1,11 @@
 version: '2'
 services:
-  vacinacaocovidv2-postgresql:
+  vacinacao-postgresql:
     image: postgres:12.3
     # volumes:
-    #     - ~/volumes/jhipster/VacinacaoCovidV2/postgresql/:/var/lib/postgresql/data/
+    #     - ~/volumes/jhipster/Vacinacao/postgresql/:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=VacinacaoCovidV2
+      - POSTGRES_USER=Vacinacao
       - POSTGRES_PASSWORD=
       - POSTGRES_HOST_AUTH_METHOD=trust
     ports:

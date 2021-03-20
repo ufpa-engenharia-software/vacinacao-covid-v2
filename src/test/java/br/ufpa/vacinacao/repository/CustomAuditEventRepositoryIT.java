@@ -3,7 +3,7 @@ package br.ufpa.vacinacao.repository;
 import static br.ufpa.vacinacao.repository.CustomAuditEventRepository.EVENT_DATA_COLUMN_MAX_LENGTH;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import br.ufpa.vacinacao.VacinacaoCovidV2App;
+import br.ufpa.vacinacao.VacinacaoApp;
 import br.ufpa.vacinacao.config.Constants;
 import br.ufpa.vacinacao.config.audit.AuditEventConverter;
 import br.ufpa.vacinacao.domain.PersistentAuditEvent;
@@ -26,7 +26,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * Integration tests for {@link CustomAuditEventRepository}.
  */
-@SpringBootTest(classes = VacinacaoCovidV2App.class)
+@SpringBootTest(classes = VacinacaoApp.class)
 @Transactional
 public class CustomAuditEventRepositoryIT {
     @Autowired
