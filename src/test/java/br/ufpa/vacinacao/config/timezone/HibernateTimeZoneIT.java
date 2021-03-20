@@ -3,7 +3,7 @@ package br.ufpa.vacinacao.config.timezone;
 import static java.lang.String.format;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import br.ufpa.vacinacao.VacinacaoCovidV2App;
+import br.ufpa.vacinacao.VacinacaoApp;
 import br.ufpa.vacinacao.repository.timezone.DateTimeWrapper;
 import br.ufpa.vacinacao.repository.timezone.DateTimeWrapperRepository;
 import java.time.*;
@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * Integration tests for the ZoneId Hibernate configuration.
  */
-@SpringBootTest(classes = VacinacaoCovidV2App.class)
+@SpringBootTest(classes = VacinacaoApp.class)
 public class HibernateTimeZoneIT {
     @Autowired
     private DateTimeWrapperRepository dateTimeWrapperRepository;
@@ -148,7 +148,7 @@ public class HibernateTimeZoneIT {
     }
 
     private String generateSqlRequest(String fieldName, long id) {
-        return format("SELECT %s FROM jhi_date_time_wrapper where id=%d", fieldName, id);
+        return format("SELECT %s FROM jhip_date_time_wrapper where id=%d", fieldName, id);
     }
 
     private void assertThatDateStoredValueIsEqualToInsertDateValueOnGMTTimeZone(SqlRowSet sqlRowSet, String expectedValue) {

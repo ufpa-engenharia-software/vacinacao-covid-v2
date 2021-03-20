@@ -9,7 +9,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import br.ufpa.vacinacao.VacinacaoCovidV2App;
+import br.ufpa.vacinacao.VacinacaoApp;
 import br.ufpa.vacinacao.domain.User;
 import br.ufpa.vacinacao.repository.UserRepository;
 import br.ufpa.vacinacao.web.rest.vm.LoginVM;
@@ -27,7 +27,7 @@ import org.springframework.transaction.annotation.Transactional;
  * Integration tests for the {@link UserJWTController} REST controller.
  */
 @AutoConfigureMockMvc
-@SpringBootTest(classes = VacinacaoCovidV2App.class)
+@SpringBootTest(classes = VacinacaoApp.class)
 public class UserJWTControllerIT {
     @Autowired
     private UserRepository userRepository;

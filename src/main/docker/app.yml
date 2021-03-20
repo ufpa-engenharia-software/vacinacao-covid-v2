@@ -1,16 +1,16 @@
 version: '2'
 services:
-  vacinacaocovidv2-app:
-    image: vacinacaocovidv2
+  vacinacao-app:
+    image: vacinacao
     environment:
       - _JAVA_OPTIONS=-Xmx512m -Xms256m
       - SPRING_PROFILES_ACTIVE=prod,swagger
       - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://vacinacaocovidv2-postgresql:5432/VacinacaoCovidV2
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://vacinacao-postgresql:5432/Vacinacao
       - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
     ports:
       - 8080:8080
-  vacinacaocovidv2-postgresql:
+  vacinacao-postgresql:
     extends:
       file: postgresql.yml
-      service: vacinacaocovidv2-postgresql
+      service: vacinacao-postgresql

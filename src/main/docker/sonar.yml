@@ -1,6 +1,6 @@
 version: '2'
 services:
-  vacinacaocovidv2-sonar:
+  vacinacao-sonar:
     image: sonarqube:8.3.1-community
     ports:
       - 9001:9000

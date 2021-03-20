@@ -2,7 +2,7 @@ package br.ufpa.vacinacao.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import br.ufpa.vacinacao.VacinacaoCovidV2App;
+import br.ufpa.vacinacao.VacinacaoApp;
 import br.ufpa.vacinacao.domain.PersistentAuditEvent;
 import br.ufpa.vacinacao.repository.PersistenceAuditEventRepository;
 import io.github.jhipster.config.JHipsterProperties;
@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * Integration tests for {@link AuditEventService}.
  */
-@SpringBootTest(classes = VacinacaoCovidV2App.class)
+@SpringBootTest(classes = VacinacaoApp.class)
 @Transactional
 public class AuditEventServiceIT {
     @Autowired

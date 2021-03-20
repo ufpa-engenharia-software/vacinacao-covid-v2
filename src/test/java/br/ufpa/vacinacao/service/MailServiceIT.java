@@ -4,7 +4,7 @@ import static org.assertj.core.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
-import br.ufpa.vacinacao.VacinacaoCovidV2App;
+import br.ufpa.vacinacao.VacinacaoApp;
 import br.ufpa.vacinacao.config.Constants;
 import br.ufpa.vacinacao.domain.User;
 import io.github.jhipster.config.JHipsterProperties;
@@ -38,9 +38,11 @@ import org.thymeleaf.spring5.SpringTemplateEngine;
 /**
  * Integration tests for {@link MailService}.
  */
-@SpringBootTest(classes = VacinacaoCovidV2App.class)
+@SpringBootTest(classes = VacinacaoApp.class)
 public class MailServiceIT {
     private static final String[] languages = {
+        "en",
+        "fr",
         // jhipster-needle-i18n-language-constant - JHipster will add/remove languages in this array
     };
     private static final Pattern PATTERN_LOCALE_3 = Pattern.compile("([a-z]{2})-([a-zA-Z]{4})-([a-z]{2})");
